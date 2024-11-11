@@ -19,6 +19,10 @@ class AppApplicationTests {
 	 public void testSingleNumber() {
 	     assertEquals(1, AppApplication.add("1"));
 	 }
+	 @Test
+	 public void testMultipleNumbers() {
+	     assertEquals(6, AppApplication.add("1,2,3"));
+	 }
 	
 
 }
