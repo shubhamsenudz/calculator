@@ -27,6 +27,10 @@ class AppApplicationTests {
 	 public void testNewlineSeparator() {
 	     assertEquals(6, AppApplication.add("1\n2,3"));
 	 }
+	 @Test
+	 public void testCustomDelimiter() {
+	     assertEquals(6, AppApplication.add("//;\n1;2;3"));
+	 }
 	
 
 }

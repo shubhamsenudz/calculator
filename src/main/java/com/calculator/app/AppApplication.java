@@ -14,6 +14,12 @@ public class AppApplication {
 	    if (numbers.isEmpty()) {
 	        return 0;
 	    }
+	    if (numbers.startsWith("//")) {
+	        String delimiter = numbers.substring(2, numbers.indexOf("\n"));
+	        numbers = numbers.substring(numbers.indexOf("\n") + 1);
+	        numbers = numbers.replace(delimiter, ",");
+	    }
+
 	    numbers = numbers.replace("\n", ",");
 	    String[] numArray = numbers.split(",");
 	    int sum = 0;
