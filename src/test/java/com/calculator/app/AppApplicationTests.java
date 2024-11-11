@@ -23,6 +23,10 @@ class AppApplicationTests {
 	 public void testMultipleNumbers() {
 	     assertEquals(6, AppApplication.add("1,2,3"));
 	 }
+	 @Test
+	 public void testNewlineSeparator() {
+	     assertEquals(6, AppApplication.add("1\n2,3"));
+	 }
 	
 
 }
