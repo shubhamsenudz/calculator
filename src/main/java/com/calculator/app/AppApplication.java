@@ -10,11 +10,12 @@ public class AppApplication {
 		SpringApplication.run(AppApplication.class, args);
 	}
 
-	 public static int add(String numbers) {
-	        if (numbers.isEmpty()) {
-	            return 0;
-	        }
-	        return 0;  //future changes
+	public static int add(String numbers) {
+	    if (numbers.isEmpty()) {
+	        return 0;
 	    }
+	    
+	    return Integer.parseInt(numbers);
+	}
 
 }

@@ -15,7 +15,10 @@ class AppApplicationTests {
 	    public void testEmptyString() {
 	        assertEquals(0, AppApplication.add(""));
 	    }
-	 
+	 @Test
+	 public void testSingleNumber() {
+	     assertEquals(1, AppApplication.add("1"));
+	 }
 	
 
 }
