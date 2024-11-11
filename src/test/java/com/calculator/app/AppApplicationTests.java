@@ -1,6 +1,7 @@
 package com.calculator.app;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -30,6 +31,15 @@ class AppApplicationTests {
 	 @Test
 	 public void testCustomDelimiter() {
 	     assertEquals(6, AppApplication.add("//;\n1;2;3"));
+	 }
+	 @Test
+	 public void testNegativeNumbers() {
+	     try {
+	    	 AppApplication.add("1,-2,3,-4");
+	         fail("Expected exception not thrown");
+	     } catch (IllegalArgumentException e) {
+	         assertEquals("Negative numbers not allowed: -2,-4", e.getMessage());
+	     }
 	 }
 	
 
